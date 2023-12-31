@@ -216,6 +216,7 @@ p {
   padding: 0.5rem 1rem;
   justify-content: center;
   align-items: center;
+  align-self: flex-start;
   border-radius: 0.25rem;
   background-color: var(--primary);
   color: var(--background);
@@ -288,6 +289,20 @@ p {
   padding-right: 8rem;
   min-height: 100vh;
   z-index: 2;
+}
+
+.content-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  z-index: 2;
+}
+
+.content-right {
+  display: flex;
+  gap: 20rem;
+  z-index: 2;
+  align-self: flex-end;
 }
 
 @media (max-width: 866px) {
@@ -501,6 +516,7 @@ p {
   z-index: 10;
   padding-top: 10rem;
   margin-top: -5rem;
+  max-width: 48.6vw;
 }
 
 .home-mobile {
@@ -520,10 +536,11 @@ p {
   /* margin-bottom: 100px; */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: left;
+  text-align: left;
   gap: 2rem;
   z-index: 10;
+  max-width: 48.6vw;
 }
 
 .about-mobile {
@@ -666,10 +683,11 @@ p {
   /* margin-bottom: 400px; */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: left;
+  text-align: left;
   gap: 2rem;
   z-index: 10;
+  max-width: 48.6vw;
 }
 
 .sponsors-mobile {
