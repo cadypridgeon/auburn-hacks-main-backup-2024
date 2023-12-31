@@ -331,7 +331,8 @@ p {
   top: 0;
   transition: opacity 0.2s ease-in-out;
   backdrop-filter: blur(1rem);
-  box-shadow: 0px 2px 4px 4px rgba(15, 13, 28, 0.1);
+  box-shadow: 0px 2px 4px 4px rgba(15, 13, 28, 0.05);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 @media (max-width: 866px) {
@@ -561,15 +562,24 @@ p {
   z-index: 10;
 }
 
+.faq-rows {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
 .faq-wrapper {
   display: flex;
   flex-direction: column;
+  width: 50%;
   gap: 16px;
 }
 
 .faq-container {
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(0.5rem);
+  box-shadow: 0px 2px 4px 4px rgba(15, 13, 28, 0.05);
+  background-color: rgba(255, 255, 255, 0.05);
   padding: 32px;
   cursor: pointer;
   transition: color 0.2s ease-in-out;
@@ -670,6 +680,34 @@ p {
   text-align: center;
   gap: 2rem;
   z-index: 10;
+}
+
+.sponsors-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.sponsors-container {
+  display: flex;
+  padding: 2rem;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  object-fit: contain;
+  background-color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.sponsors-container:hover {
+  background-color: var(--accent);
+}
+
+.sponsors-container img {
+  filter: invert(12%) sepia(16%) saturate(3310%) hue-rotate(215deg)
+    brightness(99%) contrast(96%);
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease-in-out;
 }
 
 .sponsors-mobile {
