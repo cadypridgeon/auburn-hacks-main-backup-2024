@@ -308,7 +308,7 @@ p {
   max-width: 56vw;
 }
 
-@media (max-width: 866px) {
+@media (max-width: 1090px) {
   .content {
     display: none;
   }
@@ -328,7 +328,7 @@ p {
   z-index: 50;
 }
 
-@media (max-width: 866px) {
+@media (max-width: 1090px) {
   .content-mobile {
     display: flex;
   }
@@ -353,7 +353,7 @@ p {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-@media (max-width: 866px) {
+@media (max-width: 1090px) {
   .navbar {
     display: none;
   }
@@ -422,7 +422,7 @@ p {
   display: none;
 }
 
-@media (max-width: 866px) {
+@media (max-width: 1090px) {
   .navbar-mobile {
     display: flex;
   }
@@ -750,6 +750,7 @@ p {
 .flip-card {
   display: flex;
   flex-direction: column;
+  border-radius: 5px;
   position: relative;
 }
 
@@ -775,9 +776,9 @@ p {
 .bottom,
 .top-flip,
 .bottom-flip {
-  height: 4rem;
-  width: 8rem;
-  padding: 2rem;
+  height: 66px;
+  width: 160px;
+  padding: 42px 32px;
   color: white;
   overflow: hidden;
   text-align: center;
