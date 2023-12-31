@@ -785,8 +785,8 @@ p {
 
 .top,
 .top-flip {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.7);
   background-color: rgb(48, 50, 78);
 }
@@ -796,8 +796,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
   background-color: darkblue;
   box-shadow: 0 2px rgb(71, 83, 115, 0.2) inset;
 }
