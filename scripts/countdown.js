@@ -1,29 +1,63 @@
-function countDown(){
-    // Variable Declarations
-    const countDownDisplay = document.getElementsByClassName("count-down-counter");
-    // goes through the array with the class name count-down-counter and creates the create down for each element in the array
-
-    let countDownDate = new Date("Feb 3, 2024 00:00:00").getTime();
-    let present = new Date().getTime();
-    let distance = countDownDate - present;
-    let months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
-    let days = Math.floor((distance % (1000*60*60*24*30)) / (1000*60*60*24));
-    let hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-    let minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
-    let seconds = Math.floor((distance % (1000*60)) / 1000);
-
-    // Displaying the Countdown
-    for (let i = 0; i < countDownDisplay.length; i++) {
-        countDownDisplay[i].innerHTML = `<p>${months}m ${days}d ${hours}h ${minutes}m ${seconds}s</p>`;
+const timer = [
+    {
+        classname: 'months',
+        label: 'Months',
+    },
+    {
+        classname: 'days',
+        label: 'Days',
+    },
+    {
+        classname: 'hours',
+        label: 'Hours',
+    },
+    {
+        classname: 'minutes',
+        label: 'Minutes',
+    },
+    {
+        classname: 'seconds',
+        label: 'Seconds',
     }
+];
 
-    // Changing text for countdown ending/event starting
-    if (distance < 0) {
-        clearInterval(countDown);
-        countDown.innerHTML = "HERE WE GO!";
-    }
+const countdownCounter = document.querySelector('.count-down-counter');
+// const countdownCounter = document.getElementsByClassName('count-down-counter');
+let countToDate = new Date().setHours(new Date().getHours() + 2400);
+let previous;
+// let countDownDate = new Date("Feb 3, 2024 00:00:00").getTime();
+// let present = new Date().getTime();
+
+function showTimer() {
+    timer.forEach(element => {
+        const div = document.createElement('div');
+        div.classList.add(element.classname);
+        div.innerHTML = `
+            <div class="flip-card">
+                <div class="top">00</div>
+                <div class="bottom">00</div>
+            </div>
+            <p class="title">${element.label}</p>
+        `;
+        countdownCounter.appendChild(div);
+    });
 }
 
-// Initializes the countdown and then runs the script once every second.
-countDown();
-let x = setInterval(countDown, 1000);
+showTimer();
+
+// function showCountDown() {
+//     timer.forEach(element => {
+//         const div = document.createElement('div');
+//         div.classList.add(element.classname);
+//         div.innerHTML = `
+//             <div class="flip-card>
+//                 <div class="top">00</div>
+//                 <div class="bottom">00</div>
+//             </div>
+//             <p class="title">${element.label}</p>
+//         `;
+//         countdownCounter.appendChild(div);
+//     })
+// }
+
+// showCountDown();
