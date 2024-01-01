@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?&family=Inclusive Sans&display=swap");
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --primary: #ffffff;
   --secondary: #e1deed;
@@ -726,7 +732,7 @@ p {
   z-index: 10;
 }
 
-.countdown {
+.count-down {
   padding-top: 10rem;
   margin-top: -10rem;
   display: flex;
@@ -748,7 +754,7 @@ p {
   z-index: 10;
 }
 
-.countdown-counter {
+.countdown {
   display: flex;
   gap: 1rem;
   text-align: center;
@@ -786,7 +792,7 @@ p {
 .bottom-flip {
   height: 66px;
   width: 160px;
-  padding: 42px 32px;
+  padding: 33px 20px;
   color: white;
   overflow: hidden;
   text-align: center;
@@ -794,8 +800,8 @@ p {
 
 .top,
 .top-flip {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.7);
   background-color: rgb(48, 50, 78);
 }
@@ -805,8 +811,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
   background-color: darkblue;
   box-shadow: 0 2px rgb(71, 83, 115, 0.2) inset;
 }

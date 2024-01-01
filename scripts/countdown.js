@@ -17,7 +17,7 @@ const timer = [
   },
 ];
 
-const countdownContainer = document.querySelector(".countdown-counter");
+const countdownContainer = document.querySelector(".countdown");
 const countToDate = new Date("2024-02-03T11:00:00");
 let previous;
 
