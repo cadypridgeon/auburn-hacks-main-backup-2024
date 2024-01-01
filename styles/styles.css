@@ -82,10 +82,10 @@ p {
 
 .h1 {
   font-family: "good-times", sans-serif;
-  font-size: 5rem;
+  font-size: 4rem;
   font-style: normal;
   font-weight: 800;
-  line-height: 5rem;
+  line-height: 4rem;
   text-transform: uppercase;
 }
 
@@ -289,23 +289,23 @@ p {
   padding-left: 8rem;
   padding-right: 8rem;
   min-height: 100vh;
-  z-index: 2;
+  z-index: 10;
 }
 
 .content-left {
   display: flex;
   flex-direction: column;
   gap: 20rem;
-  z-index: 2;
-  max-width: 56vw;
+  z-index: 10;
+  max-width: 50vw;
 }
 
 .content-right {
   display: flex;
   gap: 20rem;
-  z-index: 2;
+  z-index: 10;
   align-self: flex-end;
-  max-width: 56vw;
+  max-width: 50vw;
 }
 
 @media (max-width: 1090px) {
@@ -516,7 +516,7 @@ p {
   flex-direction: column;
   align-items: left;
   text-align: left;
-  gap: 3rem;
+  gap: 2rem;
   z-index: 10;
   padding-top: 10rem;
   margin-top: -5rem;
@@ -820,6 +820,8 @@ p {
   align-items: center;
   flex-direction: column;
   gap: 2rem;
+  margin-top: 8rem;
+  z-index: 1;
 }
 
 /* ✿✿✿ SOCIALS ✿✿✿ */
@@ -1007,4 +1009,113 @@ p {
   100% {
     opacity: 0%;
   }
+}
+
+/* ✿✿✿ IMAGES ✿✿✿ */
+
+@keyframes float {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -2rem;
+  }
+  100% {
+    margin-top: 2rem;
+  }
+}
+
+#ufo1 {
+  position: absolute;
+  right: 8rem;
+  top: 15rem;
+  width: 20rem;
+  rotate: 8deg;
+  transform: translateX(0) translateY(0) scaleX(-1);
+  transition: transform 4s cubic-bezier(0.32, 0.08, 0.16, 1);
+  animation: float 5s ease-in-out infinite alternate;
+}
+
+#ufo1.show-animate {
+  transform: translateX(-100vw) translateY(50rem) scaleX(-1);
+}
+
+#planet1 {
+  position: absolute;
+  left: -24rem;
+  top: 32rem;
+  width: 60rem;
+  transform: translateX(-30rem) rotate(30deg);
+  transition: transform 3s cubic-bezier(0.32, 0.08, 0.16, 1);
+  z-index: 5;
+}
+
+#planet1.show-animate {
+  transform: translateX(0rem) rotate(0deg);
+}
+
+#ufo2 {
+  position: absolute;
+  left: -20rem;
+  top: 69rem;
+  width: 20rem;
+  rotate: 8deg;
+  transform: translateX(0);
+  transition: transform 4s cubic-bezier(0.32, 0.08, 0.16, 1);
+  z-index: 8;
+}
+
+#ufo2.show-animate {
+  transform: translateX(calc(100vw + 40rem));
+}
+
+#planet2 {
+  position: absolute;
+  right: -60rem;
+  top: 138rem;
+  width: 80rem;
+  transform: translateX(0rem) rotate(0deg);
+  transition: transform 3s cubic-bezier(0.32, 0.08, 0.16, 1);
+  z-index: 5;
+}
+
+#planet2.show-animate {
+  transform: translateX(-30rem) rotate(40deg);
+}
+
+#ufo3 {
+  position: absolute;
+  right: -20rem;
+  top: 175rem;
+  width: 20rem;
+  rotate: -8deg;
+  transform: scaleX(-1) translateX(0);
+  transition: transform 4s cubic-bezier(0.32, 0.08, 0.16, 1);
+  z-index: 8;
+}
+
+#ufo3.show-animate {
+  transform: scaleX(-1) translateX(calc(100vw + 40rem));
+}
+
+#cave {
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  position: absolute;
+  z-index: 0;
+}
+
+#ufo4 {
+  position: absolute;
+  left: -20rem;
+  top: 210rem;
+  width: 20rem;
+  transform: translateX(0);
+  transition: transform 4s cubic-bezier(0.32, 0.08, 0.16, 1);
+  z-index: 8;
+}
+
+#ufo4.show-animate {
+  transform: translateX(70rem) translateY(30rem);
 }
