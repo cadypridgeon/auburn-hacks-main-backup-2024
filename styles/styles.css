@@ -792,7 +792,6 @@ p {
 .bottom-flip {
   height: 66px;
   width: 160px;
-  padding: 33px 20px;
   color: white;
   overflow: hidden;
   text-align: center;
@@ -800,6 +799,7 @@ p {
 
 .top,
 .top-flip {
+  padding: 34px 20px 32px 20px;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
@@ -808,6 +808,7 @@ p {
 
 .bottom,
 .bottom-flip {
+  padding: 32px 20px 34px 20px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
