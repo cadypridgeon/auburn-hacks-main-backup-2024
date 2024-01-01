@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?&family=Inclusive Sans&display=swap");
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --primary: #ffffff;
   --secondary: #e1deed;
@@ -718,7 +724,7 @@ p {
   z-index: 10;
 }
 
-.countdown {
+.count-down {
   padding-top: 10rem;
   margin-top: -10rem;
   display: flex;
@@ -740,7 +746,7 @@ p {
   z-index: 10;
 }
 
-.countdown-counter {
+.countdown {
   display: flex;
   gap: 1rem;
   text-align: center;
@@ -778,7 +784,7 @@ p {
 .bottom-flip {
   height: 66px;
   width: 160px;
-  padding: 42px 32px;
+  padding: 33px 20px;
   color: white;
   overflow: hidden;
   text-align: center;
