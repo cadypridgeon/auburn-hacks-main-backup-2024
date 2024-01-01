@@ -414,7 +414,8 @@ p {
 
 .navbar-mobile {
   backdrop-filter: blur(1rem);
-  box-shadow: 0px 2px 4px 4px rgba(15, 13, 28, 0.1);
+  box-shadow: 0px 2px 4px 4px rgba(15, 13, 28, 0.05);
+  background-color: rgba(255, 255, 255, 0.05);
   height: 4rem;
   z-index: 100;
   position: fixed;
@@ -590,6 +591,13 @@ p {
   display: flex;
   flex-direction: column;
   width: 50%;
+  gap: 16px;
+}
+
+.faq-wrapper-mobile {
+  display: flex;
+  flex-direction: column;
+  /* width: 50%; */
   gap: 16px;
 }
 
@@ -824,6 +832,13 @@ p {
   z-index: 1;
 }
 
+.footer-mobile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 /* ✿✿✿ SOCIALS ✿✿✿ */
 
 .socials {
@@ -1055,7 +1070,7 @@ p {
 #ufo1 {
   position: absolute;
   right: 8rem;
-  top: 15rem;
+  top: 20rem;
   width: 20rem;
   rotate: 8deg;
   transform: scale(125%) translateX(0) translateY(0) scaleX(-1);
@@ -1071,7 +1086,7 @@ p {
 #planet1 {
   position: absolute;
   left: -24rem;
-  top: 32rem;
+  top: 36rem;
   width: 60rem;
   transform: translateX(-30rem) rotate(30deg);
   transition: transform 3s cubic-bezier(0.32, 0.08, 0.16, 1);
@@ -1085,7 +1100,7 @@ p {
 #ufo2 {
   position: absolute;
   left: -20rem;
-  top: 69rem;
+  top: 78rem;
   width: 20rem;
   rotate: 8deg;
   transform: translateX(0);
@@ -1100,7 +1115,7 @@ p {
 #planet2 {
   position: absolute;
   right: -60rem;
-  top: 138rem;
+  top: 170rem;
   width: 80rem;
   transform: translateX(0rem) rotate(0deg);
   transition: transform 3s cubic-bezier(0.32, 0.08, 0.16, 1);
@@ -1114,7 +1129,7 @@ p {
 #ufo3 {
   position: absolute;
   right: -20rem;
-  top: 175rem;
+  top: 215rem;
   width: 20rem;
   rotate: -8deg;
   transform: scaleX(-1) translateX(0);
@@ -1137,7 +1152,7 @@ p {
 #ufo4 {
   position: absolute;
   left: -20rem;
-  top: 210rem;
+  top: 248rem;
   width: 20rem;
   transform: translateX(0);
   transition: transform 4s cubic-bezier(0.32, 0.08, 0.16, 1);
@@ -1151,7 +1166,7 @@ p {
 #debris1 {
   position: absolute;
   width: 30rem;
-  top: 138rem;
+  top: 172rem;
   left: 0rem;
   transform: scaleX(-1);
   animation: float 10s ease-in-out infinite alternate;
@@ -1160,7 +1175,7 @@ p {
 #debris2 {
   position: absolute;
   width: 15rem;
-  top: 150rem;
+  top: 182rem;
   right: 16rem;
   animation: big-float 8s ease-in-out infinite alternate;
 }
@@ -1182,7 +1197,7 @@ p {
 #comet4 {
   position: absolute;
   width: 15rem;
-  top: 82rem;
+  top: 85rem;
   right: 5rem;
   transform: scaleX(-1);
   animation: small-float 5s ease-in-out infinite alternate;
@@ -1190,7 +1205,7 @@ p {
 #comet5 {
   position: absolute;
   width: 15rem;
-  top: 78rem;
+  top: 81rem;
   right: 20rem;
   transform: scaleX(-1);
   animation: float 8s ease-in-out infinite alternate;
@@ -1218,8 +1233,14 @@ p {
 #asteroid3 {
   position: absolute;
   width: 15rem;
-  top: 188rem;
+  top: 220rem;
   left: 0rem;
   transform: scaleX(-1) scaleY(-1);
   animation: small-float 5s ease-in-out infinite alternate;
+}
+
+#ufo5 {
+  position: absolute;
+  width: 20rem;
+  z-index: 15;
 }
