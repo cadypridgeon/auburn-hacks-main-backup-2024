@@ -5,7 +5,7 @@
 
         <title>Auburn Hacks 2024</title>
         <meta name="description"
-            content="Get excited for Auburn Hacks 2024! Pre-register today!" />
+            content="Get excited for Auburn Hacks 2024! Register today!" />
         <meta name="keywords"
             content="auburn, auburn hacks, auburn hacks 2024, mlh, auburn hackathon, hackathon" />
         <meta name="author" content="Cady Pridgeon, ..." />
@@ -15,7 +15,7 @@
         <meta property="og:title" content="Auburn Hacks 2024" />
         <meta
             property="og:description"
-            content="Get excited for Auburn Hacks 2024! Pre-register today!" />
+            content="Get excited for Auburn Hacks 2024! Register today!" />
         <meta property="og:url" content="https://auburnhacks.com" />
         <meta property="og:type" content="website" />
         <meta property="og:image"
@@ -25,12 +25,12 @@
         <meta name="twitter:site" content="@auburnhacks">
         <meta name="twitter:title" content="Auburn Hacks 2024">
         <meta name="twitter:description"
-            content="Get excited for Auburn Hacks 2024! Pre-register today!">
+            content="Get excited for Auburn Hacks 2024! Register today!">
         <meta name="twitter:image"
             content="https://auburnhacks.com/images/og.png">
 
         <link rel="icon" href="./favicon.ico" />
-        <link rel="stylesheet" type="text/css" href="./styles/styles.min.css" />
+        <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
         <link rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
 
@@ -53,15 +53,19 @@
             <div id="stars"></div>
             <div class="navbar">
                 <a href="#" onclick="smoothScroll('home')" class="logo">
-                    <img src="./images/full-logo.svg"
-                        alt="Auburn Hacks Logo" /></a>
+                    <img src="./images/logo.svg"
+                        alt="Auburn Hacks Logo"
+                        tabindex="0" /></a>
                 <div class="navigation">
-                    <a onclick="smoothScroll('home')">Home</a>
-                    <a onclick="smoothScroll('about')">About</a>
-                    <a onclick="smoothScroll('faq')">FAQ</a>
-                    <a onclick="smoothScroll('sponsors')">Sponsors</a>
+                    <a onclick="smoothScroll('home')" tabindex="0">Home</a>
+                    <a onclick="smoothScroll('about')" tabindex="0">About</a>
+                    <a onclick="smoothScroll('faq')" tabindex="0">FAQ</a>
+                    <a onclick="smoothScroll('sponsors')"
+                        tabindex="0">Sponsors</a>
+                    <a href="team.html" tabindex="0">Our Team</a>
                     <a class="primary-button body-s bold" target="_blank"
-                        href="https://auburn.qualtrics.com/jfe/form/SV_3fl8aWfQOrPETXg">Pre-Register</a>
+                        href="https://aub.ie/hacks2024"
+                        tabindex="0">Register</a>
                 </div>
                 <a id="mlh-trust-badge"
                     href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white"
@@ -77,17 +81,19 @@
                     <span></span>
                     <span></span>
                     <ul id="menu">
-                        <a class="primary body-s bold" href="#"
-                            onclick="closeAndScroll('home-mobile')">Home</a>
                         <a class="primary body-s bold"
-                            onclick="closeAndScroll('about-mobile')">About</a>
+                            href="index.html#home-mobile">Home</a>
                         <a class="primary body-s bold"
-                            onclick="closeAndScroll('faq-mobile')">FAQ</a>
+                            href="index.html#about-mobile">About</a>
                         <a class="primary body-s bold"
-                            onclick="closeAndScroll('sponsors-mobile')">Sponsors</a>
-                        <a class="primary-button body-s bold" s
+                            href="index.html#faq-mobile">FAQ</a>
+                        <a class="primary body-s bold"
+                            href="index.html#sponsors-mobile">Sponsors</a>
+                        <a class="primary body-s bold" href="team.html">Our
+                            Team</a>
+                        <a class="primary-button body-s bold"
                             target="_blank"
-                            href="https://auburn.qualtrics.com/jfe/form/SV_3fl8aWfQOrPETXg">Pre-Register</a>
+                            href="https://aub.ie/hacks2024">Register</a>
                         <div class="socials-mobile">
                             <a
                                 href="https://www.aub.ie/hacksdiscord"
@@ -130,281 +136,725 @@
                         style="width:100%"></a>
             </div>
             <div class="content">
+                <!-- ✧･ﾟ: *✧･ﾟ:* EASTER EGG *:･ﾟ✧*:･ﾟ✧ -->
+                <img id="ufo5"
+                    style="visibility: hidden;"
+                    src="./images/ufo.svg"
+                    alt="Auburn Hacks tiger in a UFO" />
+                <!-- ✧･ﾟ: *✧･ﾟ:* EASTER EGG *:･ﾟ✧*:･ﾟ✧ -->
+                <img class="image ufo" id="ufo1" src="./images/ufo.svg"
+                    alt="Auburn Hacks tiger in a UFO" />
+                <img class="image" id="planet1" src="./images/planet1.svg"
+                    alt="Orange planet with craters" />
+                <img class="image ufo" id="ufo2" src="./images/ufo.svg"
+                    alt="Auburn Hacks tiger in a UFO" />
+                <img class="image" id="planet2" src="./images/planet2.svg"
+                    alt="Orange planet with a ring" />
+                <img class="image ufo" id="ufo3" src="./images/ufo.svg"
+                    alt="Auburn Hacks tiger in a UFO" />
+                <img class="image ufo" id="ufo4" src="./images/ufo.svg"
+                    alt="Auburn Hacks tiger in a UFO" />
+                <img id="cave" src="./images/cave.svg"
+                    alt="Space cave" />
+                <img id="asteroid1" src="./images/asteroids1.svg"
+                    alt="Asteroids" />
+                <img id="asteroid2" src="./images/asteroids2.svg"
+                    alt="Asteroids" />
+                <img id="asteroid3" src="./images/asteroids1.svg"
+                    alt="Asteroids" />
+                <img id="comet1" src="./images/comet1.svg"
+                    alt="Comet" />
 
-                <div class="home" id="home">
-                    <h1 class="h1 primary">Auburn Hacks</h1>
-                    <h2 class="h2 primary">February 3-4, 2024</h2>
-                    <div class="socials">
-                        <a
-                            href="https://www.aub.ie/hacksdiscord"
-                            target="_blank"
-                            class="circle">
-                            <i class="logo fab fa-discord"></i>
-                        </a>
-                        <a
-                            href="https://www.instagram.com/auburnhacks/?hl=en"
-                            target="_blank"
-                            class="circle">
-                            <i class="logo fab fa-instagram"></i>
-                        </a>
-                        <a
-                            href="https://www.youtube.com/channel/UC7axEejq1UtSctGUg3JtjgQ"
-                            target="_blank"
-                            class="circle">
-                            <i class="logo fab fa-youtube"></i>
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/company/auburnhacks/"
-                            target="_blank"
-                            class="circle">
-                            <i class="logo fab fa-linkedin-in"></i>
+                <img id="comet3" src="./images/comet3.svg"
+                    alt="Comet" />
+                <img id="comet4" src="./images/comet4.svg"
+                    alt="Comet" />
+                <img id="comet5" src="./images/comet5.svg"
+                    alt="Comet" />
 
-                        </a>
-                        <a
-                            href="mailto:staff@auburnhacks.com"
-                            target="_blank"
-                            class="circle">
-                            <i class="logo fas fa-envelope"></i>
-                        </a>
-                    </div>
-                    <!-- <a
-                        class="large-button body-xl bold"
-                        href="https://auburn.qualtrics.com/jfe/form/SV_3fl8aWfQOrPETXg"
-                        target="_blank">
-                        Pre-Register
-                    </a> -->
-                    <div class="scroll-down">
-                        <button type="button" onclick="smoothScroll('about')"
-                            style="background: transparent; border: none;"><svg
-                                class="arrows">
-                                <path class="a1" d="M0 0 L30 32 L60 0"></path>
-                                <path class="a2" d="M0 20 L30 52 L60 20"></path>
-                                <path class="a3" d="M0 40 L30 72 L60 40"></path>
-                            </svg></button>
+                <img id="debris1" src="./images/debris1.svg"
+                    alt="Space debris" />
+                <img id="debris2" src="./images/debris2.svg"
+                    alt="Space debris" />
+
+                <div class="content-left">
+                    <div class="home" id="home">
+                        <h1 class="h1 primary">Auburn Hacks</h1>
+                        <h2 class="h2 primary">February 3-4, 2024</h2>
+                        <div class="socials">
+                            <a
+                                href="https://www.aub.ie/hacksdiscord"
+                                target="_blank"
+                                class="circle">
+                                <i class="logo fab fa-discord"></i>
+                            </a>
+                            <a
+                                href="https://www.instagram.com/auburnhacks/?hl=en"
+                                target="_blank"
+                                class="circle">
+                                <i class="logo fab fa-instagram"></i>
+                            </a>
+                            <a
+                                href="https://www.youtube.com/channel/UC7axEejq1UtSctGUg3JtjgQ"
+                                target="_blank"
+                                class="circle">
+                                <i class="logo fab fa-youtube"></i>
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/company/auburnhacks/"
+                                target="_blank"
+                                class="circle">
+                                <i class="logo fab fa-linkedin-in"></i>
+
+                            </a>
+                            <a
+                                href="mailto:staff@auburnhacks.com"
+                                target="_blank"
+                                class="circle">
+                                <i class="logo fas fa-envelope"></i>
+                            </a>
+                        </div>
+                        <!-- <a
+                            class="large-button body-xl bold"
+                            href="https://auburn.qualtrics.com/jfe/form/SV_3fl8aWfQOrPETXg"
+                            target="_blank">
+                            Pre-Register
+                        </a> -->
                     </div>
                 </div>
 
-                <div class="about" id="about">
-                    <h2 class="h2 primary">About</h2>
-                    <p class="body-m secondary">
-                        Auburn Hacks is a 24-hour event where students from
-                        Auburn University and universities in the Southeast come
-                        together to build technical projects. We provide
-                        workshops to give students the tools they need to
-                        develop outstanding projects, and at the end of the
-                        event, participants submit their projects for judging to
-                        win prizes. We promote an encouraging atmosphere through
-                        events and activities that foster a friendly community
-                        for all participants and create opportunities for them
-                        to network with the companies that sponsor us to make
-                        the event possible. Please join us February 3-4, 2024,
-                        for the largest hackathon in Alabama!
-                    </p>
-                    <a
-                        class="primary-button body-l bold"
-                        href="https://auburn.qualtrics.com/jfe/form/SV_3fl8aWfQOrPETXg"
-                        target="_blank">
-                        Pre-Register
-                    </a>
+                <div class="content-right">
+                    <div class="about" id="about">
+                        <h2 class="h2 primary">About</h2>
+                        <p class="body-m secondary">
+                            We foster a supportive atmosphere, welcoming
+                            individuals of all skill levels and backgrounds.
+                            Come engage in networking sessions with sponsoring
+                            companies to create connections that shape your
+                            future. Join us on February 3-4, 2024, for Alabama's
+                            largest hackathon!
+                        </p>
+                        <p class="body-m secondary">
+                            We foster a supportive atmosphere, welcoming
+                            individuals of all skill levels and backgrounds.
+                            Come engage in networking sessions with sponsoring
+                            companies to create connections that shape your
+                            future. Join us on February 3-4, 2024, for Alabama's
+                            largest hackathon!
+                        </p>
+                        <p class="body-l secondary">
+                            Ready for lift-off?
+                        </p>
+                        <a
+                            class="primary-button body-l bold"
+                            href="https://aub.ie/hacks2024"
+                            target="_blank">
+                            Hack with Us!
+                        </a>
+                    </div>
                 </div>
 
                 <div class="faq" id="faq">
                     <h2 class="h2 primary">FAQ</h2>
-                    <div class="faq-wrapper">
-                        <div class="faq-container">
-                            <div class="question primary body-m bold">
-                                <p>What is a hackathon?
-                                </p>
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    width="16" height="10"
-                                    viewBox="0 0 16 10" fill="none">
-                                    <path
-                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
-                                        fill="white" />
-                                </svg>
-                            </div>
-                            <div class="answer-container">
-                                <div class="answer secondary body-s">
-                                    A hackathon is an event that typically lasts
-                                    one or two days, where people come together
-                                    to collaborate and create a project of their
-                                    choosing. Hackathons are usually coding
-                                    events, but programming experience is not
-                                    required!
+                    <div class="faq-rows">
+                        <div class="faq-wrapper">
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>What is a hackathon?
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        A hackathon is a collaborative event
+                                        spanning one or two days where
+                                        participants collaborate to create a
+                                        project of their choice. Though they can
+                                        be coding-focused, no prior programming
+                                        experience is necessary!
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="faq-container">
-                            <div class="question primary body-m bold">
-                                <p>What goes on at Auburn Hacks?
-                                </p>
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    width="16" height="10"
-                                    viewBox="0 0 16 10" fill="none">
-                                    <path
-                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
-                                        fill="white" />
-                                </svg>
-                            </div>
-                            <div class="answer-container">
-                                <div class="answer secondary body-s">
-                                    At Auburn Hacks, hundreds of people come
-                                    together to learn about coding and build
-                                    technical projects. This year, we invite
-                                    those interested in creating a project with
-                                    hardware to participate. Additionally, if
-                                    you have no computer science or engineering
-                                    experience, please join us! We have many
-                                    resources for you to learn more about the
-                                    tech field. Outside of working on their
-                                    projects, participants can attend workshops,
-                                    activities, and tech talks to learn about
-                                    computer science and build a community.
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>When and where is the hackathon?
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="faq-container">
-                            <div class="question primary body-m bold">
-                                <p>When and where is the hackathon?
-                                </p>
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    width="16" height="10"
-                                    viewBox="0 0 16 10" fill="none">
-                                    <path
-                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
-                                        fill="white" />
-                                </svg>
-                            </div>
-                            <div class="answer-container">
-                                <div class="answer secondary body-s">
-                                    Auburn Hacks will start Saturday, February
-                                    3, 2024, and end Sunday, February 4, 2024.
-                                    It is located in the Brown-Kopel Engineering
-                                    Student Achievement Center on Auburn
-                                    University's campus.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="faq-container">
-                            <div class="question primary body-m bold">
-                                <p>Do I need to know how to code to participate?
-                                </p>
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    width="16" height="10"
-                                    viewBox="0 0 16 10" fill="none">
-                                    <path
-                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
-                                        fill="white" />
-                                </svg>
-                            </div>
-                            <div class="answer-container">
-                                <div class="answer secondary body-s">
-                                    No, not at all! We want the hackathon to be
-                                    a learning experience for everyone, so if
-                                    you are interested in computer science,
-                                    please join us! We ensure there is something
-                                    for everyone to learn.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="faq-container">
-                            <div class="question primary body-m bold">
-                                <p>Are there any rules?
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        Auburn Hacks starts Saturday, February
+                                        3, 2024, and ends Sunday, February 4,
+                                        2024. It is located in the Brown-Kopel
+                                        Engineering Student Achievement Center
+                                        on Auburn University's campus.
 
-                                </p>
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    width="16" height="10"
-                                    viewBox="0 0 16 10" fill="none">
-                                    <path
-                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
-                                        fill="white" />
-                                </svg>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="answer-container">
-                                <div class="answer secondary body-s">
-                                    Our biggest rule is that all work must be
-                                    done at Auburn Hacks. Also, everyone who
-                                    participates must follow the <a
-                                        href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
-                                        target="_blank"
-                                        class="body-s bold link">MLH
-                                        Code
-                                        of Conduct.</a>
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>Who can participate?
+
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        Current college students or graduates
+                                        within the past year are eligible.
+                                        Undergraduates, graduates, and students
+                                        from any university are welcome at
+                                        Auburn Hacks!
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>Do I need coding experience to join?
+
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        No coding experience? No problem! Auburn
+                                        Hacks is a learning platform for all
+                                        tech enthusiasts. Join us to learn and
+                                        explore!
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>How do I register for the hackathon?
+
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        Secure your spot by <a
+                                            href="https://aub.ie/hacks2024"
+                                            target="_blank"
+                                            class="body-s bold link">registering
+                                            here!</a>
+                                        Registration closes on January 31, 2024,
+                                        at 11:59 PM CST. For inquiries, <a
+                                            href="mailto:staff@auburnhacks.com"
+                                            target="_blank"
+                                            class="body-s bold link">email
+                                            us!</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>Is there a registration fee?
+
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        Participation at Auburn Hacks is free
+                                        for everyone!
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>What should I bring to the hackathon?
+
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        Pack essentials like your laptop,
+                                        chargers, and any tech tools. For the
+                                        24-hour event, consider a sleeping bag,
+                                        toiletries, and lots of enthusiasm!
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>What should I wear for the hackathon?
+
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        Comfort is key! Plan for 24 hours and
+                                        bring a change of clothes. We have some
+                                        exciting optional activities planned!
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>Will there be mentors or workshops
+                                        available?
+
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        Yes, we will have workshops going on
+                                        throughout the event. If a topic
+                                        interests you, please stop by!
+                                        Additionally, we will have a couple of
+                                        mentors present during the event who can
+                                        assist with technical questions.
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>What are the prizes or awards for
+                                        winners?
+
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        Yes, there will be cash prizes for the
+                                        top three projects! There may also be
+                                        sponsor prizes available.
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>Is there a theme or specific problem to
+                                        solve?
+
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        Our theme this year is Cosmic Escape!
+                                        While we do not require participants to
+                                        create a themed project, it is
+                                        encouraged. Projects of all backgrounds
+                                        are welcomed!
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="faq-container">
-                            <div class="question primary body-m bold">
-                                <p>Are there any COVID-19 regulations?
+                        <div class="faq-wrapper">
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>What is the event schedule?
 
-                                </p>
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    width="16" height="10"
-                                    viewBox="0 0 16 10" fill="none">
-                                    <path
-                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
-                                        fill="white" />
-                                </svg>
-                            </div>
-                            <div class="answer-container">
-                                <div class="answer secondary body-s">
-                                    Auburn Hacks will be held in accordance with
-                                    university policies. Currently, the
-                                    hackathon will be in-person, and masks will
-                                    not be required. However, if you are exposed
-                                    to COVID-19, please follow the <a
-                                        href="https://www.cdc.gov/coronavirus/2019-ncov/your-health/isolation.html"
-                                        target="_blank"
-                                        class="body-s bold link">CDC
-                                        guidelines</a>
-                                    to determine whether you should
-                                    participate.
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        As the hackathon nears, a live site will
+                                        be published with the full hackathon
+                                        schedule and other resources. If you
+                                        register, you will receive an email with
+                                        the live site and the full schedule
+                                        attached.
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="faq-container">
-                            <div class="question primary body-m bold">
-                                <p>Have more questions?
-                                </p>
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    width="16" height="10"
-                                    viewBox="0 0 16 10" fill="none">
-                                    <path
-                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
-                                        fill="white" />
-                                </svg>
-                            </div>
-                            <div class="answer-container">
-                                <div class="answer secondary body-s">
-                                    If you have any other questions, please
-                                    <a
-                                        href="mailto:staff@auburnhacks.com"
-                                        target="_blank"
-                                        class="body-s bold link">email us!</a>
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>What kind of projects are accepted?
 
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        All technical projects are accepted at
+                                        Auburn Hacks! We encourage projects that
+                                        showcase innovative software and/or
+                                        hardware development. Whether it's a web
+                                        app, mobile application, IoT device, or
+                                        any creative tech solution, all ideas
+                                        are welcome.
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>How are teams formed?
+
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        If you do not have a team before
+                                        arriving at the hackathon, we will have
+                                        a social event during the first hour of
+                                        check-ins for hackers to meet each
+                                        other. There, you will be able to form a
+                                        team!
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>Can I participate if I don't have a team?
+
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        Yes, of course! In our social hour
+                                        before the Opening Ceremony, you will
+                                        have the chance to meet other hackers,
+                                        as well as our sponsors!
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>What resources or tools will be provided?
+
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        Our Auburn Hacks Notion will be
+                                        available to participants during the
+                                        event. There, you will find tutorials,
+                                        online resources, and project prompts.
+                                        Additionally, we will have a couple of
+                                        mentors available for questions during
+                                        the event.
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>Will food and accommodations be provided?
+
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        Participants will receive free lunch,
+                                        dinner, breakfast, and snacks.
+                                        Unfortunately, Auburn Hacks will not
+                                        provide compensation to those traveling
+                                        to Auburn. Please <a
+                                            href="mailto:staff@auburnhacks.com"
+                                            target="_blank"
+                                            class="body-s bold link">email
+                                            us!</a> here if you
+                                        have any questions.
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>How will judging or presentations work?
+
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        At the end of the hackathon, teams will
+                                        exhibit their projects for evaluation by
+                                        a diverse panel of industry
+                                        professionals and academics.
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>Can I start working on my project before
+                                        the event?
+
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        No, all project development must occur
+                                        during Auburn Hacks.
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>Is there a code of conduct for the event?
+
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        Everyone who participates must abide by
+                                        the <a
+                                            href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
+                                            target="_blank"
+                                            class="body-s bold link">MLH
+                                            Code
+                                            of Conduct.</a> Our biggest
+                                        rule is that all work must be done at
+                                        Auburn Hacks.
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>What COVID-19 safety measures are in
+                                        place?
+
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        Auburn Hacks adheres to university
+                                        policies. Currently, Auburn Hacks is
+                                        in-person, with optional masks. If
+                                        exposed to COVID-19, please follow <a
+                                            href="https://www.cdc.gov/coronavirus/2019-ncov/your-health/isolation.html"
+                                            target="_blank"
+                                            class="body-s bold link">CDC
+                                            guidelines</a> before participating.
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-container">
+                                <div class="question primary body-m bold"
+                                    tabindex="0">
+                                    <p>How can I contact the organizers for
+                                        further questions?
+
+                                    </p>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="10"
+                                        viewBox="0 0 16 10" fill="none">
+                                        <path
+                                            d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <div class="answer-container">
+                                    <div class="answer secondary body-s">
+                                        If you have any other questions, please
+                                        <a
+                                            href="mailto:staff@auburnhacks.com"
+                                            target="_blank"
+                                            class="body-s bold link">email
+                                            us!</a> here!
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="sponsors" id="sponsors">
-                    <h2 class="h2 primary">Sponsors</h2>
-                    <p class="body-m secondary"><strong
-                            class="primary">Interested
-                            in sponsoring
-                            Auburn Hacks? </strong>Please reach out! We would
-                        love to partner with you.</p>
-                    <a class="primary-button body-l bold"
-                        href="mailto:sponsors@auburnhacks.com"
-                        target="_blank">Contact
-                        Us</a>
-                </div>
+                <div class="content-left">
+                    <div class="sponsors" id="sponsors">
+                        <h2 class="h2 primary">Sponsors</h2>
 
-                <div class="countdown">
+                        <div class="sponsors-wrapper">
+                            <a class="sponsors-container"
+                                href="https://www.swri.org/" target="_blank">
+                                <img src="./images/swri.svg"
+                                    alt="Southwest Research Institute logo" />
+                            </a>
+                            <a class="sponsors-container"
+                                href="https://www.mcleodsoftware.com/"
+                                target="_blank">
+                                <img src="./images/mcleod.svg"
+                                    alt="McLeod Software logo" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="count-down">
                     <h3 class="h2 primary ">COUNTDOWN TO LAUNCH</h3>
-                    <h3 class="h2 secondary count-down-counter"></h3>
+                    <!-- Countdown Clock Credit: https://www.youtube.com/watch?v=_ZAWOK18jmU&ab_channel=WebDevYT -->
+                    <h3 class="h2 secondary countdown"></h3>
                 </div>
 
                 <div class="footer">
@@ -458,18 +908,21 @@
                     <h2 class="h3 primary">February 3-4, 2024</h2>
                     <a
                         class="large-button body-l bold"
-                        href="https://auburn.qualtrics.com/jfe/form/SV_3fl8aWfQOrPETXg"
+                        href="https://aub.ie/hacks2024"
                         target="_blank">
-                        Pre-Register
+                        Register Now!
                     </a>
                     <div class="scroll-down">
                         <button type="button"
                             onclick="smoothScroll('about-mobile')"
                             style="background: transparent; border: none;"><svg
                                 class="arrows">
-                                <path class="a1" d="M0 0 L30 32 L60 0"></path>
-                                <path class="a2" d="M0 20 L30 52 L60 20"></path>
-                                <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                                <path class="a1"
+                                    d="M0 0 L30 32 L60 0"></path>
+                                <path class="a2"
+                                    d="M0 20 L30 52 L60 20"></path>
+                                <path class="a3"
+                                    d="M0 40 L30 72 L60 40"></path>
                             </svg></button>
                     </div>
                 </div>
@@ -477,30 +930,35 @@
                 <div class="about-mobile" id="about-mobile">
                     <h2 class="h3 primary">About</h2>
                     <p class="body-s secondary">
-                        Auburn Hacks is a 24-hour event where students from
-                        Auburn University and universities in the Southeast come
-                        together to build technical projects. We provide
-                        workshops to give students the tools they need to
-                        develop outstanding projects, and at the end of the
-                        event, participants submit their projects for judging to
-                        win prizes. We promote an encouraging atmosphere through
-                        events and activities that foster a friendly community
-                        for all participants and create opportunities for them
-                        to network with the companies that sponsor us to make
-                        the event possible. Please join us February 3-4, 2024,
-                        for the largest hackathon in Alabama!
+                        We foster a supportive atmosphere, welcoming
+                        individuals of all skill levels and backgrounds.
+                        Come engage in networking sessions with sponsoring
+                        companies to create connections that shape your
+                        future. Join us on February 3-4, 2024, for Alabama's
+                        largest hackathon!
+                    </p>
+                    <p class="body-s secondary">
+                        We foster a supportive atmosphere, welcoming
+                        individuals of all skill levels and backgrounds.
+                        Come engage in networking sessions with sponsoring
+                        companies to create connections that shape your
+                        future. Join us on February 3-4, 2024, for Alabama's
+                        largest hackathon!
+                    </p>
+                    <p class="body-m secondary">
+                        Ready for lift-off?
                     </p>
                     <a
                         class="primary-button body-m bold"
-                        href="https://auburn.qualtrics.com/jfe/form/SV_3fl8aWfQOrPETXg"
+                        href="https://aub.ie/hacks2024"
                         target="_blank">
-                        Pre-Register
+                        Hack with Us!
                     </a>
                 </div>
 
                 <div class="faq-mobile" id="faq-mobile">
                     <h2 class="h3 primary">FAQ</h2>
-                    <div class="faq-wrapper">
+                    <div class="faq-wrapper-mobile">
                         <div class="faq-container">
                             <div class="question primary body-s bold">
                                 <p>What is a hackathon?
@@ -515,42 +973,13 @@
                             </div>
                             <div class="answer-container">
                                 <div class="answer secondary body-s">
-                                    A hackathon is an event that typically lasts
-                                    one or two days, where people come together
-                                    to collaborate and create a project of their
-                                    choosing. Hackathons are usually coding
-                                    events, but programming experience is not
-                                    required!
+                                    A hackathon is a collaborative event
+                                    spanning one or two days where
+                                    participants collaborate to create a
+                                    project of their choice. Though they can
+                                    be coding-focused, no prior programming
+                                    experience is necessary!
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="faq-container">
-                            <div class="question primary body-s bold">
-                                <p>What goes on at Auburn Hacks?
-                                </p>
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    width="16" height="10"
-                                    viewBox="0 0 16 10" fill="none">
-                                    <path
-                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
-                                        fill="white" />
-                                </svg>
-                            </div>
-                            <div class="answer-container">
-                                <div class="answer secondary body-s">
-                                    At Auburn Hacks, hundreds of people come
-                                    together to learn about coding and build
-                                    technical projects. This year, we invite
-                                    those interested in creating a project with
-                                    hardware to participate. Additionally, if
-                                    you have no computer science or engineering
-                                    experience, please join us! We have many
-                                    resources for you to learn more about the
-                                    tech field. Outside of working on their
-                                    projects, participants can attend workshops,
-                                    activities, and tech talks to learn about
-                                    computer science and build a community.
                                 </div>
                             </div>
                         </div>
@@ -568,39 +997,18 @@
                             </div>
                             <div class="answer-container">
                                 <div class="answer secondary body-s">
-                                    Auburn Hacks will start Saturday, February
-                                    3, 2024, and end Sunday, February 4, 2024.
-                                    It is located in the Brown-Kopel Engineering
-                                    Student Achievement Center on Auburn
-                                    University's campus.
+                                    Auburn Hacks starts Saturday, February
+                                    3, 2024, and ends Sunday, February 4,
+                                    2024. It is located in the Brown-Kopel
+                                    Engineering Student Achievement Center
+                                    on Auburn University's campus.
+
                                 </div>
                             </div>
                         </div>
                         <div class="faq-container">
                             <div class="question primary body-s bold">
-                                <p>Do I need to know how to code to participate?
-                                </p>
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    width="16" height="10"
-                                    viewBox="0 0 16 10" fill="none">
-                                    <path
-                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
-                                        fill="white" />
-                                </svg>
-                            </div>
-                            <div class="answer-container">
-                                <div class="answer secondary body-s">
-                                    No, not at all! We want the hackathon to be
-                                    a learning experience for everyone, so if
-                                    you are interested in computer science,
-                                    please join us! We ensure there is something
-                                    for everyone to learn.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="faq-container">
-                            <div class="question primary body-s bold">
-                                <p>Are there any rules?
+                                <p>Who can participate?
 
                                 </p>
                                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -613,20 +1021,441 @@
                             </div>
                             <div class="answer-container">
                                 <div class="answer secondary body-s">
-                                    Our biggest rule is that all work must be
-                                    done at Auburn Hacks. Also, everyone who
-                                    participates must follow the <a
+                                    Current college students or graduates
+                                    within the past year are eligible.
+                                    Undergraduates, graduates, and students
+                                    from any university are welcome at
+                                    Auburn Hacks!
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-container">
+                            <div class="question primary body-s bold">
+                                <p>Do I need coding experience to join?
+
+                                </p>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="10"
+                                    viewBox="0 0 16 10" fill="none">
+                                    <path
+                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="answer-container">
+                                <div class="answer secondary body-s">
+                                    No coding experience? No problem! Auburn
+                                    Hacks is a learning platform for all
+                                    tech enthusiasts. Join us to learn and
+                                    explore!
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-container">
+                            <div class="question primary body-s bold">
+                                <p>How do I register for the hackathon?
+
+                                </p>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="10"
+                                    viewBox="0 0 16 10" fill="none">
+                                    <path
+                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="answer-container">
+                                <div class="answer secondary body-s">
+                                    Secure your spot by <a
+                                        href="https://aub.ie/hacks2024"
+                                        target="_blank"
+                                        class="body-s bold link">registering
+                                        here!</a>
+                                    Registration closes on January 31, 2024,
+                                    at 11:59 PM CST. For inquiries, <a
+                                        href="mailto:staff@auburnhacks.com"
+                                        target="_blank"
+                                        class="body-s bold link">email
+                                        us!</a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-container">
+                            <div class="question primary body-s bold">
+                                <p>Is there a registration fee?
+
+                                </p>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="10"
+                                    viewBox="0 0 16 10" fill="none">
+                                    <path
+                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="answer-container">
+                                <div class="answer secondary body-s">
+                                    Participation at Auburn Hacks is free
+                                    for everyone!
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-container">
+                            <div class="question primary body-s bold">
+                                <p>What should I bring to the hackathon?
+
+                                </p>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="10"
+                                    viewBox="0 0 16 10" fill="none">
+                                    <path
+                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="answer-container">
+                                <div class="answer secondary body-s">
+                                    Pack essentials like your laptop,
+                                    chargers, and any tech tools. For the
+                                    24-hour event, consider a sleeping bag,
+                                    toiletries, and lots of enthusiasm!
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-container">
+                            <div class="question primary body-s bold">
+                                <p>What should I wear for the hackathon?
+
+                                </p>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="10"
+                                    viewBox="0 0 16 10" fill="none">
+                                    <path
+                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="answer-container">
+                                <div class="answer secondary body-s">
+                                    Comfort is key! Plan for 24 hours and
+                                    bring a change of clothes. We have some
+                                    exciting optional activities planned!
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-container">
+                            <div class="question primary body-s bold">
+                                <p>Will there be mentors or workshops
+                                    available?
+
+                                </p>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="10"
+                                    viewBox="0 0 16 10" fill="none">
+                                    <path
+                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="answer-container">
+                                <div class="answer secondary body-s">
+                                    Yes, we will have workshops going on
+                                    throughout the event. If a topic
+                                    interests you, please stop by!
+                                    Additionally, we will have a couple of
+                                    mentors present during the event who can
+                                    assist with technical questions.
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-container">
+                            <div class="question primary body-s bold">
+                                <p>What are the prizes or awards for
+                                    winners?
+
+                                </p>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="10"
+                                    viewBox="0 0 16 10" fill="none">
+                                    <path
+                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="answer-container">
+                                <div class="answer secondary body-s">
+                                    Yes, there will be cash prizes for the
+                                    top three projects! There may also be
+                                    sponsor prizes available.
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-container">
+                            <div class="question primary body-s bold">
+                                <p>Is there a theme or specific problem to
+                                    solve?
+
+                                </p>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="10"
+                                    viewBox="0 0 16 10" fill="none">
+                                    <path
+                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="answer-container">
+                                <div class="answer secondary body-s">
+                                    Our theme this year is Cosmic Escape!
+                                    While we do not require participants to
+                                    create a themed project, it is
+                                    encouraged. Projects of all backgrounds
+                                    are welcomed!
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-container">
+                            <div class="question primary body-s bold">
+                                <p>What is the event schedule?
+
+                                </p>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="10"
+                                    viewBox="0 0 16 10" fill="none">
+                                    <path
+                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="answer-container">
+                                <div class="answer secondary body-s">
+                                    As the hackathon nears, a live site will
+                                    be published with the full hackathon
+                                    schedule and other resources. If you
+                                    register, you will receive an email with
+                                    the live site and the full schedule
+                                    attached.
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-container">
+                            <div class="question primary body-s bold">
+                                <p>What kind of projects are accepted?
+
+                                </p>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="10"
+                                    viewBox="0 0 16 10" fill="none">
+                                    <path
+                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="answer-container">
+                                <div class="answer secondary body-s">
+                                    All technical projects are accepted at
+                                    Auburn Hacks! We encourage projects that
+                                    showcase innovative software and/or
+                                    hardware development. Whether it's a web
+                                    app, mobile application, IoT device, or
+                                    any creative tech solution, all ideas
+                                    are welcome.
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-container">
+                            <div class="question primary body-s bold">
+                                <p>How are teams formed?
+
+                                </p>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="10"
+                                    viewBox="0 0 16 10" fill="none">
+                                    <path
+                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="answer-container">
+                                <div class="answer secondary body-s">
+                                    If you do not have a team before
+                                    arriving at the hackathon, we will have
+                                    a social event during the first hour of
+                                    check-ins for hackers to meet each
+                                    other. There, you will be able to form a
+                                    team!
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-container">
+                            <div class="question primary body-s bold">
+                                <p>Can I participate if I don't have a team?
+
+                                </p>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="10"
+                                    viewBox="0 0 16 10" fill="none">
+                                    <path
+                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="answer-container">
+                                <div class="answer secondary body-s">
+                                    Yes, of course! In our social hour
+                                    before the Opening Ceremony, you will
+                                    have the chance to meet other hackers,
+                                    as well as our sponsors!
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-container">
+                            <div class="question primary body-s bold">
+                                <p>What resources or tools will be provided?
+
+                                </p>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="10"
+                                    viewBox="0 0 16 10" fill="none">
+                                    <path
+                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="answer-container">
+                                <div class="answer secondary body-s">
+                                    Our Auburn Hacks Notion will be
+                                    available to participants during the
+                                    event. There, you will find tutorials,
+                                    online resources, and project prompts.
+                                    Additionally, we will have a couple of
+                                    mentors available for questions during
+                                    the event.
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-container">
+                            <div class="question primary body-s bold">
+                                <p>Will food and accommodations be provided?
+
+                                </p>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="10"
+                                    viewBox="0 0 16 10" fill="none">
+                                    <path
+                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="answer-container">
+                                <div class="answer secondary body-s">
+                                    Participants will receive free lunch,
+                                    dinner, breakfast, and snacks.
+                                    Unfortunately, Auburn Hacks will not
+                                    provide compensation to those traveling
+                                    to Auburn. Please <a
+                                        href="mailto:staff@auburnhacks.com"
+                                        target="_blank"
+                                        class="body-s bold link">email
+                                        us!</a> here if you
+                                    have any questions.
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-container">
+                            <div class="question primary body-s bold">
+                                <p>How will judging or presentations work?
+
+                                </p>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="10"
+                                    viewBox="0 0 16 10" fill="none">
+                                    <path
+                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="answer-container">
+                                <div class="answer secondary body-s">
+                                    At the end of the hackathon, teams will
+                                    exhibit their projects for evaluation by
+                                    a diverse panel of industry
+                                    professionals and academics.
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-container">
+                            <div class="question primary body-s bold">
+                                <p>Can I start working on my project before
+                                    the event?
+
+                                </p>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="10"
+                                    viewBox="0 0 16 10" fill="none">
+                                    <path
+                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="answer-container">
+                                <div class="answer secondary body-s">
+                                    No, all project development must occur
+                                    during Auburn Hacks.
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-container">
+                            <div class="question primary body-s bold">
+                                <p>Is there a code of conduct for the event?
+
+                                </p>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="10"
+                                    viewBox="0 0 16 10" fill="none">
+                                    <path
+                                        d="M8 9.79333L0 1.79333L1.58669 0.206635L8 6.6525L14.4133 0.239189L16 1.82588L8 9.79333Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="answer-container">
+                                <div class="answer secondary body-s">
+                                    Everyone who participates must abide by
+                                    the <a
                                         href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
                                         target="_blank"
                                         class="body-s bold link">MLH
                                         Code
-                                        of Conduct.</a>
+                                        of Conduct.</a> Our biggest
+                                    rule is that all work must be done at
+                                    Auburn Hacks.
+
                                 </div>
                             </div>
                         </div>
                         <div class="faq-container">
                             <div class="question primary body-s bold">
-                                <p>Are there any COVID-19 regulations?
+                                <p>What COVID-19 safety measures are in
+                                    place?
 
                                 </p>
                                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -639,24 +1468,23 @@
                             </div>
                             <div class="answer-container">
                                 <div class="answer secondary body-s">
-                                    Auburn Hacks will be held in accordance with
-                                    university policies. Currently, the
-                                    hackathon will be in-person, and masks will
-                                    not be required. However, if you are exposed
-                                    to COVID-19, please follow the <a
+                                    Auburn Hacks adheres to university
+                                    policies. Currently, Auburn Hacks is
+                                    in-person, with optional masks. If
+                                    exposed to COVID-19, please follow <a
                                         href="https://www.cdc.gov/coronavirus/2019-ncov/your-health/isolation.html"
                                         target="_blank"
                                         class="body-s bold link">CDC
-                                        guidelines</a>
-                                    to determine whether you should
-                                    participate.
+                                        guidelines</a> before participating.
 
                                 </div>
                             </div>
                         </div>
                         <div class="faq-container">
                             <div class="question primary body-s bold">
-                                <p>Have more questions?
+                                <p>How can I contact the organizers for
+                                    further questions?
+
                                 </p>
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     width="16" height="10"
@@ -672,29 +1500,30 @@
                                     <a
                                         href="mailto:staff@auburnhacks.com"
                                         target="_blank"
-                                        class="body-s bold link">email us!</a>
+                                        class="body-s bold link">email
+                                        us!</a> here!
 
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
                 <div class="sponsors-mobile" id="sponsors-mobile">
                     <h2 class="h3 primary">Sponsors</h2>
-                    <p class="body-s secondary"><strong
-                            class="primary">Interested
-                            in sponsoring
-                            Auburn Hacks? </strong>Please reach out! We would
-                        love to partner with you.</p>
-                    <a class="primary-button body-m bold"
-                        href="mailto:sponsors@auburnhacks.com"
-                        target="_blank">Contact
-                        Us</a>
-                </div>
-
-                <div class="countdown-mobile">
-                    <h3 class="h3 primary ">COUNTDOWN TO LAUNCH</h3>
-                    <h3 class="h3 secondary count-down-counter"></h3>
+                    <div class="sponsors-wrapper">
+                        <a class="sponsors-container"
+                            href="https://www.swri.org/" target="_blank">
+                            <img src="./images/swri.svg"
+                                alt="Southwest Research Institute logo" />
+                        </a>
+                        <a class="sponsors-container"
+                            href="https://www.mcleodsoftware.com/"
+                            target="_blank">
+                            <img src="./images/mcleod.svg"
+                                alt="McLeod Software logo" />
+                        </a>
+                    </div>
                 </div>
 
                 <div class="footer-mobile">
@@ -743,10 +1572,11 @@
             </div>
 
             <script src="./scripts/stars.js"></script>
-            <script src="./scripts/countdown.js"></script>
+            <script src="./scripts/countdown.js" defer></script>
             <script src="./scripts/faq.js"></script>
             <script src="./scripts/smoothScroll.js"></script>
             <script src="./scripts/navbar.js"></script>
-
+            <script src="./scripts/onScroll.js"></script>
+            <script src="./scripts/ufo.js"></script>
         </body>
     </html>

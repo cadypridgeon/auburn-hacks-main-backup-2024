@@ -1,29 +1,100 @@
-function countDown(){
-    // Variable Declarations
-    const countDownDisplay = document.getElementsByClassName("count-down-counter");
-    // goes through the array with the class name count-down-counter and creates the create down for each element in the array
+const timer = [
+  {
+    className: "days",
+    label: "Days",
+  },
+  {
+    className: "hours",
+    label: "Hours",
+  },
+  {
+    className: "minutes",
+    label: "Minutes",
+  },
+  {
+    className: "seconds",
+    label: "Seconds",
+  },
+];
 
-    let countDownDate = new Date("Feb 3, 2024 00:00:00").getTime();
-    let present = new Date().getTime();
-    let distance = countDownDate - present;
-    let months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
-    let days = Math.floor((distance % (1000*60*60*24*30)) / (1000*60*60*24));
-    let hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-    let minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
-    let seconds = Math.floor((distance % (1000*60)) / 1000);
+const countdownContainer = document.querySelector(".countdown");
+const countToDate = new Date("2024-02-03T11:00:00");
+let previous;
 
-    // Displaying the Countdown
-    for (let i = 0; i < countDownDisplay.length; i++) {
-        countDownDisplay[i].innerHTML = `<p>${months}m ${days}d ${hours}h ${minutes}m ${seconds}s</p>`;
-    }
+function showTimer() {
+  timer.forEach((element) => {
+    const div = document.createElement("div");
+    div.classList.add(element.className);
+    div.innerHTML = `
+      <div class="flip-card h1">
+        <div class="top">00</div>
+        <div class="bottom">00</div>
+      </div>
+      <p class="body-l">${element.label}</p>
+    `;
 
-    // Changing text for countdown ending/event starting
-    if (distance < 0) {
-        clearInterval(countDown);
-        countDown.innerHTML = "HERE WE GO!";
-    }
+    countdownContainer.append(div);
+  });
 }
 
-// Initializes the countdown and then runs the script once every second.
-countDown();
-let x = setInterval(countDown, 1000);
+showTimer();
+
+setInterval(() => {
+  const currentDate = new Date();
+  const timeBetweenDates = Math.floor((countToDate - currentDate) / 1000);
+  if (timeBetweenDates !== previous) {
+    flipAllCards(timeBetweenDates);
+  }
+  previous = timeBetweenDates;
+}, 250);
+
+function flipAllCards(time) {
+  const days = Math.floor(time / (24 * 3600));
+  const hours = Math.floor((time / 3600) % 24);
+  const minutes = Math.floor((time / 60) % 60);
+  const seconds = Math.floor(time % 60);
+
+  const daysCard = document.querySelector(".days > .flip-card");
+  const hoursCard = document.querySelector(".hours > .flip-card");
+  const minutesCard = document.querySelector(".minutes > .flip-card");
+  const secondsCard = document.querySelector(".seconds > .flip-card");
+
+  flipCard(daysCard, days);
+  flipCard(hoursCard, hours);
+  flipCard(minutesCard, minutes);
+  flipCard(secondsCard, seconds);
+}
+
+function flipCard(flipCard, time) {
+  time = String(time).padStart(2, "0");
+  const currentValue = flipCard.querySelector(".top").innerText;
+
+  if (time == currentValue) return;
+
+  const topFlip = document.createElement("div");
+  topFlip.classList.add("top-flip");
+  topFlip.innerText = currentValue;
+
+  const bottomFlip = document.createElement("div");
+  bottomFlip.classList.add("bottom-flip");
+  bottomFlip.innerText = time;
+
+  const topHalf = flipCard.querySelector(".top");
+  const bottomHalf = flipCard.querySelector(".bottom");
+
+  topFlip.addEventListener("animationstart", () => {
+    topHalf.innerText = time;
+  });
+
+  topFlip.addEventListener("animationend", () => {
+    topFlip.remove();
+  });
+
+  bottomFlip.addEventListener("animationend", () => {
+    bottomHalf.innerText = time;
+    bottomFlip.remove();
+  });
+
+  flipCard.appendChild(topFlip);
+  flipCard.appendChild(bottomFlip);
+}
