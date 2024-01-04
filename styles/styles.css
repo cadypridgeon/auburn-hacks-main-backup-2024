@@ -1278,10 +1278,12 @@ p {
   gap: 8rem;
   flex-direction: column;
   z-index: 100;
-  padding-left: 8rem;
-  padding-right: 8rem;
-  padding-top: 12rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 8rem;
   padding-bottom: 2rem;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 @media (max-width: 1090px) {
@@ -1290,19 +1292,21 @@ p {
   }
 }
 
-#our-team {
+.team-section {
   display: flex;
   flex-direction: column;
   gap: 4rem;
   align-items: center;
+  max-width: 100%;
 }
 
-#our-team-mobile {
+.team-section-mobile {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
   text-align: center;
+  max-width: 100%;
 }
 
 #team-photo {
@@ -1313,8 +1317,8 @@ p {
 
 #team-photo-mobile {
   display: flex;
-  width: 70vw;
   border-radius: 1rem;
+  max-width: 100%;
 }
 
 #team-container {
@@ -1329,14 +1333,6 @@ p {
   flex-direction: column;
   gap: 2rem;
   align-items: flex-start;
-}
-
-#directors {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  align-items: center;
-  justify-content: center;
 }
 
 .director {
@@ -1370,12 +1366,11 @@ p {
   gap: 0.25rem;
 }
 
-#organizers {
+.section-mobile .director-content {
   display: flex;
-  flex-direction: column;
-  gap: 4rem;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 0rem;
 }
 
 #organizer-teams {
@@ -1383,8 +1378,18 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  gap: 4rem;
+  gap: 8rem;
   align-items: flex-start;
+  justify-content: center;
+}
+
+.section-mobile #organizer-teams {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 2rem;
+  align-items: center;
   justify-content: center;
 }
 
