@@ -1369,7 +1369,7 @@ p {
   gap: 0.25rem;
 }
 
-.section-mobile .director-content {
+.team-section-mobile .director-content {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -1386,7 +1386,7 @@ p {
   justify-content: center;
 }
 
-.section-mobile #organizer-teams {
+.team-section-mobile #organizer-teams {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
