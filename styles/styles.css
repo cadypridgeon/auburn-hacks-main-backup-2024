@@ -618,6 +618,7 @@ p {
   padding: 32px;
   cursor: pointer;
   transition: color 0.2s ease-in-out;
+  text-align: left;
 }
 
 .question {
