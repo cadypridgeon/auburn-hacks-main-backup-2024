@@ -6,11 +6,13 @@ faqContainers.forEach((faq) => {
   const linksInAnswer = answerContainer.querySelectorAll("a");
 
   question.addEventListener("click", () => {
+    closeOtherAnswers(faqContainers, faq);
     toggleAnswer(question, answerContainer, linksInAnswer);
   });
 
   question.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
+      closeOtherAnswers(faqContainers, faq);
       toggleAnswer(question, answerContainer, linksInAnswer);
     }
   });
@@ -36,4 +38,23 @@ function toggleAnswer(question, answerContainer, linksInAnswer) {
       link.setAttribute("tabindex", "-1");
     });
   }
+}
+
+function closeOtherAnswers(containers, currentContainer) {
+  containers.forEach((container) => {
+    const question = container.querySelector(".question");
+    const answerContainer = container.querySelector(".answer-container");
+    const linksInAnswer = answerContainer.querySelectorAll("a");
+
+    if (
+      container !== currentContainer &&
+      question.classList.contains("active")
+    ) {
+      question.classList.remove("active");
+      answerContainer.style.maxHeight = 0;
+      linksInAnswer.forEach((link) => {
+        link.setAttribute("tabindex", "-1");
+      });
+    }
+  });
 }

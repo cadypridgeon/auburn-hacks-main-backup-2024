@@ -710,6 +710,7 @@ p {
   object-fit: contain;
   background-color: white;
   transition: background-color 0.3s ease-in-out;
+  width: 50%;
 }
 
 .sponsors-container:hover {
@@ -1262,11 +1263,12 @@ p {
   justify-content: center;
   gap: 8rem;
   flex-direction: column;
-  z-index: 100;
+  z-index: 1;
   padding-left: 8rem;
   padding-right: 8rem;
   padding-top: 12rem;
   padding-bottom: 2rem;
+  position: relative;
 }
 
 @media (max-width: 1090px) {
