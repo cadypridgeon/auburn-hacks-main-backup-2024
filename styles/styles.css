@@ -1283,13 +1283,14 @@ p {
   justify-content: center;
   gap: 8rem;
   flex-direction: column;
-  z-index: 100;
+  z-index: 1;
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 8rem;
   padding-bottom: 2rem;
   overflow-x: hidden;
   box-sizing: border-box;
+  position: relative;
 }
 
 @media (max-width: 1090px) {
